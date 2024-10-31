@@ -1,4 +1,17 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {}
-
-module.exports = nextConfig
+const nextConfig = {
+    reactStrictMode: true,
+    output: 'standalone' , 
+    images: {
+      remotePatterns: [
+        {
+          protocol: 'http',
+          hostname: 'localhost',
+        },
+         
+      ],
+    },
+  };
+  
+  module.exports = nextConfig;
+  
