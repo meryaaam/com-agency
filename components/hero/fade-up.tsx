@@ -45,28 +45,44 @@ const FadeUp = () => {
     const isInView = useInView(description)
    
   return (
-   <section className="grid grid-cols-1 lg:grid-cols-2 gap-4">
-     <div className="flex flex-col gap-6">
+   <section className="grid grid-cols-2 lg:grid-cols-2 gap-4">
+     <div className="flex flex-col gap-6 ">
         <div>
             
             <span className={title({size:"lg"})}>The Loud&nbsp;</span>
             <span className={title({size:"lg", color: "blue"})}>  Voice &nbsp; </span> <br /> 
             <span className={title({ size:"lg"  })}>of your Brand &nbsp;</span>
         </div>
-        <p className="w-full md:w-1/2 my-2 text-lg lg:text-xl font-normal text-default-500 block max-w-full">
+        <p className="w-full   text-lg lg:text-xl font-normal text-default-500 block max-w-full">
         We know what’s going on. <br/>
         You need top-notch design to stand out in the tech world, but hiring in-house designers can be costly and time-consuming. 
         <br/>
         That’s when Q comes in.            </p>
      </div> 
         
-        <div className="relative" ref={description}
+        <div className="flex gap-6" ref={description}
             style={{
                 
                 display: 'flex',
                 justifyContent: 'center',
             }}
         >
+            <div data-scroll data-scroll-speed={0.1}>
+                    <RoundedButton>
+                        
+                            <p
+                                style={{
+                                    margin: 0,
+                                    fontSize: '23px',
+                                    fontWeight: 300,
+                                    position: 'relative',
+                                    zIndex: 1,
+                                }}
+                            >
+                                About me
+                            </p>
+                     </RoundedButton>
+                </div>
             <div
                 style={{
                     maxWidth: '1400px',
@@ -76,7 +92,7 @@ const FadeUp = () => {
                 }}
             >
                  
-                <motion.p
+                {/*<motion.p
                     variants={opacity}
                     animate={isInView ? 'open' : 'closed'}
                     style={{
@@ -88,23 +104,8 @@ const FadeUp = () => {
                 >
                     The combination of my passion for design, code & interaction
                     positions me in a unique place in the web design world.
-                </motion.p>
-                <div data-scroll data-scroll-speed={0.1}>
-                    <RoundedButton>
-                        
-                            <p
-                                style={{
-                                    margin: 0,
-                                    fontSize: '16px',
-                                    fontWeight: 300,
-                                    position: 'relative',
-                                    zIndex: 1,
-                                }}
-                            >
-                                About me
-                            </p>
-                     </RoundedButton>
-                </div>
+                </motion.p>*/}
+                
             </div>
         </div>
 </section>
