@@ -28,8 +28,10 @@ const FadeUp = () => {
         <span className={title({ size:"lg"  })}>of your Brand &nbsp;</span>
         </div>
         <p className="w-full md:w-1/2 my-2 text-lg lg:text-xl font-normal text-default-500 block max-w-full">
-            NextUI provides a custom TailwindCSS plugin that allows you to customize the default themes or create your own.
-            </p>
+        We know what’s going on. <br/>
+        You need top-notch design to stand out in the tech world, but hiring in-house designers can be costly and time-consuming. 
+        <br/>
+        That’s when Q comes in.            </p>
         </div> 
         
 </section>
