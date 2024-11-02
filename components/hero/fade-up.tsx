@@ -6,7 +6,7 @@ import { Button, Card , CardBody, CardFooter, CardHeader, Image, Link } from "@n
 import { button as buttonStyles } from "@nextui-org/theme";
 import { siteConfig } from "@/config/site";
 import { RightIcon, StarIcon } from "../icons";
-import { title } from "../primitives";
+import { subtitle, title } from "../primitives";
 import RoundedButton from "@/common/rounded-button";
 export const slideUp = {
     initial: {
@@ -70,17 +70,13 @@ const FadeUp = () => {
             <div data-scroll data-scroll-speed={0.1}>
                     <RoundedButton>
                         
-                            <p
-                                style={{
-                                    margin: 0,
-                                    fontSize: '23px',
-                                    fontWeight: 300,
+                    <span style={{ margin: 0,
+                    color:'#000', 
                                     position: 'relative',
-                                    zIndex: 1,
-                                }}
-                            >
-                                About me
-                            </p>
+                                    zIndex: 1, }}
+                            className={subtitle()}>About us&nbsp;
+                    </span>
+
                      </RoundedButton>
                 </div>
             <div

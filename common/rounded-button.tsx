@@ -1,13 +1,14 @@
 import React, { useEffect, useRef, ReactNode } from 'react';
 import gsap from 'gsap';
 import Magnetic from './magnetic';
+import { Link } from '@nextui-org/link';
 
 interface RoundedButtonProps extends React.HTMLAttributes<HTMLDivElement> {
     children: ReactNode;
     backgroundColor?: string;
 }
 
-export default function RoundedButton({ children, backgroundColor = "#455CE9", ...attributes }: RoundedButtonProps) {
+export default function RoundedButton({ children, backgroundColor = "#5EA2EF", ...attributes }: RoundedButtonProps) {
     const circle = useRef<HTMLDivElement>(null);
     const timeline = useRef<gsap.core.Timeline | null>(null);
     let timeoutId: NodeJS.Timeout | null = null;
@@ -33,14 +34,14 @@ export default function RoundedButton({ children, backgroundColor = "#455CE9", .
         <Magnetic>
             <div
                  style={{
-                  borderRadius: "500px",
+                  borderRadius: "50%",
                   border: "1px solid rgb(136, 136, 136)",
                   cursor: "pointer",
                   position: "relative",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
-                  padding: "60px 60px",
+                  padding: "60px 45px",
                   overflow: "hidden",
               }}
                 
@@ -55,10 +56,13 @@ export default function RoundedButton({ children, backgroundColor = "#455CE9", .
                         height: "150%",
                         position: "absolute",
                         borderRadius: "50%",
-                        top: "100%"
+                        top: "100%",
+                        color:'#fff'
                         
                     }}></div>
             </div>
+
+            
         </Magnetic>
     );
 }
