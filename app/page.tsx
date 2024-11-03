@@ -13,7 +13,7 @@ export default function Home() {
       <Hero />
       <SocialProof />
       <FadeUp />
-      <Socials />
+      <Services />
      {/* <Tricker />*/}
     </section>
  

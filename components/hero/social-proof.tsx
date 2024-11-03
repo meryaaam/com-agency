@@ -9,15 +9,15 @@ import useMeasure from "react-use-measure";
 
 export const SocialProof = () => {
     
-    const images = [
-        '/images/hero/brand/1cztq58Fj7to7zz8dMarT0oz8.svg',
-        '/images/hero/brand/ABZm12rBwLLZEO4MvzbUsQepmlU.svg',
-        '/images/hero/brand/InIlH0H8DraCdfCKhBGQrQpLZbY.svg',
-        '/images/hero/brand/6AbRyXI1vp9kRvdUWpFXQBuEI.svg', 
+  const images = [
+      '/images/hero/brand/1cztq58Fj7to7zz8dMarT0oz8.svg',
+      '/images/hero/brand/ABZm12rBwLLZEO4MvzbUsQepmlU.svg',
+      '/images/hero/brand/InIlH0H8DraCdfCKhBGQrQpLZbY.svg',
+      '/images/hero/brand/6AbRyXI1vp9kRvdUWpFXQBuEI.svg', 
 
-      ];
-      const FAST_DURATION = 25;
-      const SLOW_DURATION = 75;
+    ];
+  const FAST_DURATION = 25;
+  const SLOW_DURATION = 75;
 
   const [duration, setDuration] = useState(FAST_DURATION);
   let [ref, { width }] = useMeasure();
