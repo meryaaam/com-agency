@@ -57,12 +57,16 @@ type VisibleCards = {
 export const Services = () => {
   const [visibleCards, setVisibleCards] = useState<VisibleCards>({}); // Set the initial state type
 
-  const scrollRef = useRef<HTMLDivElement | null>(null); // Set type for ref
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const { scrollY } = useScroll();  // Set type for ref
   const { scrollYProgress } = useScroll({
       target: scrollRef,
       offset: ['start start', 'end end']
 
   })
+  const parallaxValues = services.map((_, index) =>
+    useTransform(scrollY, [0, 1000], [0, -(index + 1) * 50])
+  );
   useEffect(() => {
     const handleScroll = () => {
       const newVisibleCards: VisibleCards = {};
@@ -98,9 +102,10 @@ export const Services = () => {
        <motion.div
      id={item.key}
      initial={{ opacity: 0.5, y: 40 }}
-     animate={visibleCards[key] ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} 
-     exit={{ opacity:  -300 }}
+     animate={{ opacity: 1, y: 0 }}
+     exit={{ opacity: 0, y: 20 }}
      transition={{ duration: 0.6 }}
+     style={{ y: parallaxValues[key] }} 
    >
       <Card
         isBlurred
