@@ -57,16 +57,13 @@ type VisibleCards = {
 export const Services = () => {
   const [visibleCards, setVisibleCards] = useState<VisibleCards>({}); // Set the initial state type
 
-  const scrollRef = useRef<HTMLDivElement | null>(null);
-  const { scrollY } = useScroll();  // Set type for ref
+  const scrollRef = useRef<HTMLDivElement | null>(null); // Set type for ref
   const { scrollYProgress } = useScroll({
       target: scrollRef,
       offset: ['start start', 'end end']
 
   })
-  const parallaxValues = services.map((_, index) =>
-    useTransform(scrollY, [0, 1000], [0, -(index + 1) * 50])
-  );
+  
   useEffect(() => {
     const handleScroll = () => {
       const newVisibleCards: VisibleCards = {};
@@ -93,53 +90,70 @@ export const Services = () => {
   const isPresent = useIsPresent()
 
   return (
-    <section ref={scrollRef} className="grid grid-rows-5 w-full gap-6  ">
-     
-
-  {isPresent && services.map((item,key) => (
-   <AnimatePresence key={key}>
-      {visibleCards[key] && (
-       <motion.div
-     id={item.key}
-     initial={{ opacity: 0.5, y: 40 }}
-     animate={{ opacity: 1, y: 0 }}
-     exit={{ opacity: 0, y: 20 }}
-     transition={{ duration: 0.6 }}
-     style={{ y: parallaxValues[key] }} 
-   >
-      <Card
-        isBlurred
-        className="border-none bg-background/60 dark:bg-default-100/50 max-auto"
-        shadow="sm"
-      >
-        <CardHeader>
-          <div className="relative col-span-6 md:col-span-4">
-          <div className={subtitle({color:"blue" , class: "w-full text-lg font-bold lg:text-xl max-w-xl mt-4 mx-auto" })}>
-          {item.shortDescription}
-          </div>
-          </div>
-        </CardHeader>
-        <CardBody>
-          <div className="grid grid-cols-6 md:grid-cols-12 gap-2 md:gap-1 items-center justify-center"> 
-            <div className="flex flex-col col-span-6 md:col-span-8">
-              <div className="flex justify-between items-start">
-                <div className="flex flex-col gap-0">
-                  <h3 className="font-semibold text-default-600">  {item.description}
-                  </h3>
-                  <p className="text-small text-foreground/80">   {item.text}      </p>
-                </div>
-                
-              </div>
-
-              
+    <section  className="items-center justify-center gap-4 py-8 md:py-10"> 
+    <div className="sticky top-0  grid sm:grid-cols-3 gap-14">
+        <div> 
+            <div> 
+                <span className={title({size:"lg"})}>The Loud&nbsp;</span>
+                <span className={title({size:"lg", color: "blue"})}>  Voice &nbsp; </span> <br /> 
+                <span className={title({ size:"lg"  })}>of your Brand &nbsp;</span>
             </div>
-          </div>
-        </CardBody>
-      </Card>
-      </motion.div>)}
-    </AnimatePresence>
-  ))}
+            <p className="w-full   text-lg lg:text-xl font-normal text-default-500 block max-w-full">
+            We know what’s going on. <br/>
+            You need top-notch design to stand out in the tech world, but hiring in-house designers can be costly and time-consuming. 
+            <br/>
+            That’s when Q comes in.            </p> 
+        </div>
+        <div className="max-w-[900px]  py-8 md:py-10 col-span-2">
+      
+          <section ref={scrollRef} className="grid grid-rows-5 w-full gap-6  ">
+              {isPresent && services.map((item,key) => (
+              <AnimatePresence  >
+                  {visibleCards[key] && (
+                  <motion.div 
+                  className="sticky top-0"
+                initial={{ opacity: 0.5, y: 40 }}
+                animate={visibleCards[key] ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} 
+                exit={{ opacity:  -300 }}
+                transition={{ duration: 0.6 }}
+              >
+                  <Card
+                    isBlurred
+                    className="border-none bg-background/60 dark:bg-default-100/50 max-auto"
+                    shadow="sm"
+                  >
+                    <CardHeader>
+                      <div className="relative col-span-6 md:col-span-4">
+                      <div className={subtitle({color:"blue" , class: "w-full text-lg font-bold lg:text-xl max-w-xl mt-4 mx-auto" })}>
+                      {item.shortDescription}
+                      </div>
+                      </div>
+                    </CardHeader>
+                    <CardBody>
+                      <div className="grid grid-cols-6 md:grid-cols-12 gap-2 md:gap-1 items-center justify-center"> 
+                        <div className="flex flex-col col-span-6 md:col-span-8">
+                          <div className="flex justify-between items-start">
+                            <div className="flex flex-col gap-0">
+                              <h3 className="font-semibold text-default-600">  {item.description}
+                              </h3>
+                              <p className="text-small text-foreground/80">   {item.text}      </p>
+                            </div>
+                            
+                          </div>
 
-     </section>
+                          
+                        </div>
+                      </div>
+                    </CardBody>
+                  </Card>
+                  </motion.div>)}
+                </AnimatePresence>
+              ))}
+          </section>
+        </div>
+        
+    
+  </div>
+  </section>
   );
 };

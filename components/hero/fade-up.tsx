@@ -46,8 +46,8 @@ const FadeUp = () => {
     const isInView = useInView(description)
    
   return (
-    <section className=" sticky items-center justify-center gap-4 py-8 md:py-10"> 
-    <div className="grid sm:grid-cols-3 gap-14">
+    <section className="sticky top-0 items-center justify-center gap-4 py-8 md:py-10"> 
+    <div className="sticky top-0 grid sm:grid-cols-3 gap-14">
         <div> 
             <div> 
                 <span className={title({size:"lg"})}>The Loud&nbsp;</span>

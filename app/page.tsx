@@ -12,7 +12,7 @@ export default function Home() {
     <section>
       <Hero />
      {/* <SocialProof />*/}
-      <FadeUp />
+      <Services />
       
       
      {/* <Tricker />*/}
