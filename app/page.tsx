@@ -11,9 +11,10 @@ export default function Home() {
   return (
     <section>
       <Hero />
-      <SocialProof />
+     {/* <SocialProof />*/}
       <FadeUp />
-      <Services />
+      
+      
      {/* <Tricker />*/}
     </section>
  

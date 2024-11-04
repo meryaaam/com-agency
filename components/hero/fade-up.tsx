@@ -8,6 +8,7 @@ import { siteConfig } from "@/config/site";
 import { RightIcon, StarIcon } from "../icons";
 import { subtitle, title } from "../primitives";
 import RoundedButton from "@/common/rounded-button";
+import { Services } from "./services";
 export const slideUp = {
     initial: {
         y: "100%",
@@ -45,66 +46,78 @@ const FadeUp = () => {
     const isInView = useInView(description)
    
   return (
-   <section className="grid grid-cols-2 lg:grid-cols-2 gap-4">
-     <div className="flex flex-col gap-6 ">
-        <div>
-            
-            <span className={title({size:"lg"})}>The Loud&nbsp;</span>
-            <span className={title({size:"lg", color: "blue"})}>  Voice &nbsp; </span> <br /> 
-            <span className={title({ size:"lg"  })}>of your Brand &nbsp;</span>
-        </div>
-        <p className="w-full   text-lg lg:text-xl font-normal text-default-500 block max-w-full">
-        We know what’s going on. <br/>
-        You need top-notch design to stand out in the tech world, but hiring in-house designers can be costly and time-consuming. 
-        <br/>
-        That’s when Q comes in.            </p>
-     </div> 
-        
-        <div className="flex gap-6" ref={description}
-            style={{
-                
-                display: 'flex',
-                justifyContent: 'center',
-            }}
-        >
-            <div data-scroll data-scroll-speed={0.1}>
-                    <RoundedButton>
-                        
-                    <span style={{ margin: 0,
-                    color:'#000', 
-                                    position: 'relative',
-                                    zIndex: 1, }}
-                            className={subtitle()}>About us&nbsp;
-                    </span>
-
-                     </RoundedButton>
-                </div>
-            <div
-                style={{
-                    maxWidth: '1400px',
-                    display: 'flex',
-                    gap: '50px',
-                    position: 'relative',
-                }}
-            >
-                 
-                {/*<motion.p
-                    variants={opacity}
-                    animate={isInView ? 'open' : 'closed'}
-                    style={{
-                        fontSize: '18px',
-                        width: '80%',
-                        fontWeight: 300,
-                        margin: 0,
-                    }}
-                >
-                    The combination of my passion for design, code & interaction
-                    positions me in a unique place in the web design world.
-                </motion.p>*/}
-                
+    <section className=" sticky items-center justify-center gap-4 py-8 md:py-10"> 
+    <div className="grid sm:grid-cols-3 gap-14">
+        <div> 
+            <div> 
+                <span className={title({size:"lg"})}>The Loud&nbsp;</span>
+                <span className={title({size:"lg", color: "blue"})}>  Voice &nbsp; </span> <br /> 
+                <span className={title({ size:"lg"  })}>of your Brand &nbsp;</span>
             </div>
+            <p className="w-full   text-lg lg:text-xl font-normal text-default-500 block max-w-full">
+            We know what’s going on. <br/>
+            You need top-notch design to stand out in the tech world, but hiring in-house designers can be costly and time-consuming. 
+            <br/>
+            That’s when Q comes in.            </p> 
         </div>
-</section>
+        {/*<div className="max-w-[900px]  py-8 md:py-10 col-span-2">
+            <div className="grid grid-cols-2  sm:grid-cols-2 grid-rows-3   gap-4">
+                <Card shadow="sm" className=" h-[150px] grid-col-1 sm:grid-cols-1" isPressable onPress={() => console.log("item pressed")}>
+                    <CardHeader className="p-5"></CardHeader>
+                    <CardBody className="overflow-visible p-5">
+                        <span className={title({ size:"sm" , color:"cyan" })}>Social Ads &nbsp;</span>
+                        <p className="w-full   text-lg lg:text-xl font-normal text-default-500 block max-w-full">
+                            That’s when Q comes in.           
+                        </p>                    
+                    </CardBody>
+                     
+                    </Card> 
+                <Card shadow="sm" className="h-[100px] sm:grid-col" isPressable onPress={() => console.log("item pressed")}>
+                     <CardBody className="overflow-visible p-5">
+                        <span className={title({ size:"sm"   })}>SaaS Marketing &nbsp;</span>
+                        <p className="w-full   text-lg lg:text-xl font-normal text-default-500 block max-w-full">
+                            That’s when Q comes in.           
+                        </p>                    
+                    </CardBody>
+                     
+                    </Card> 
+                 
+                <Card shadow="sm" className="h-[300px] row-span-2 sm:row-span-2" isPressable onPress={() => console.log("item pressed")}>
+                    <CardBody  className="overflow-visible p-0">
+                    <Image
+                        removeWrapper
+                        shadow="sm"
+                        radius="lg" 
+                        width="100%"
+                        height="auto"
+                        alt="image"
+                        className="z-0 w-full h-full scale-125 -translate-y-6 object-cover"
+                        src="images/hero/fruit-3.jpeg"
+                        />
+                    </CardBody>
+                     
+                    </Card>  
+                <Card shadow="sm" className="h-[130px] grid-col-2 sm:grid-col-2" isPressable onPress={() => console.log("item pressed")}>
+                    <CardBody className="p-5">
+                    <span className={title({ size:"sm" , color:"cyan"  })}>SEO &nbsp;</span>
+                        <p className="w-full   text-lg lg:text-xl font-normal text-default-500 block max-w-full">
+                            That’s when Q comes in.           
+                        </p>   
+                    </CardBody>
+                     
+                    </Card> 
+            </div>
+
+
+
+        </div>*/}
+        <div className="max-w-[900px]  py-8 md:py-10 col-span-2">
+        <Services />
+        </div>
+        
+    
+  </div>
+  </section>
 );
 };
 
