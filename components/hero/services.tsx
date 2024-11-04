@@ -73,6 +73,7 @@ export const Services = () => {
       services.forEach((item, index) => {
         const triggerPoint = (index + 1) * 300;  
         newVisibleCards[index] = scrollY > triggerPoint && scrollY < triggerPoint + 300; 
+        newVisibleCards[index+1] = true; 
       });
 
       setVisibleCards(newVisibleCards);
@@ -86,8 +87,7 @@ export const Services = () => {
     };
 
     
-  }, []);
-  const isPresent = useIsPresent()
+  }, []); 
 
   return (
     <section  className="items-center justify-center gap-4 py-8 md:py-10"> 
@@ -107,14 +107,14 @@ export const Services = () => {
         <div className="max-w-[900px]  py-8 md:py-10 col-span-2">
       
           <section ref={scrollRef} className="grid grid-rows-5 w-full gap-6  ">
-              {isPresent && services.map((item,key) => (
+              { services.map((item,key) => (
               <AnimatePresence  >
-                  {visibleCards[key] && (
+                  {visibleCards && (
                   <motion.div 
                   className="sticky top-0"
                 initial={{ opacity: 0.5, y: 40 }}
                 animate={visibleCards[key] ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} 
-                exit={{ opacity:  -300 }}
+                exit={{ opacity:  0 }}
                 transition={{ duration: 0.6 }}
               >
                   <Card
