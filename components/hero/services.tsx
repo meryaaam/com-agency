@@ -5,6 +5,7 @@ import { AnimatePresence, motion, useIsPresent, useScroll, useTransform } from "
 import SectionLayout from "@/common/SectionLayout";
 import HorizontalWrapper from "@/common/HorizontalWrapper";
 import { Card, CardBody, CardHeader, Image } from "@nextui-org/react";
+import ReactLenis from "@studio-freight/react-lenis";
 
 const services = [
   {
@@ -90,70 +91,73 @@ export const Services = () => {
   }, []); 
 
   return (
-    <section  className="items-center justify-center gap-4 py-8 md:py-10"> 
-    <div className="sticky top-0  grid sm:grid-cols-3 gap-14">
-        <div> 
-            <div> 
-                <span className={title({size:"lg"})}>The Loud&nbsp;</span>
-                <span className={title({size:"lg", color: "blue"})}>  Voice &nbsp; </span> <br /> 
-                <span className={title({ size:"lg"  })}>of your Brand &nbsp;</span>
-            </div>
-            <p className="w-full   text-lg lg:text-xl font-normal text-default-500 block max-w-full">
-            We know what’s going on. <br/>
-            You need top-notch design to stand out in the tech world, but hiring in-house designers can be costly and time-consuming. 
-            <br/>
-            That’s when Q comes in.            </p> 
-        </div>
-        <div className="max-w-[900px]  py-8 md:py-10 col-span-2">
-      
-          <section ref={scrollRef} className="grid grid-rows-5 w-full gap-6  ">
-              { services.map((item,key) => (
-              <AnimatePresence  >
-                  {visibleCards && (
-                  <motion.div 
-                  className="sticky top-0"
-                initial={{ opacity: 0.5, y: 40 }}
-                animate={visibleCards[key] ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} 
-                exit={{ opacity:  0 }}
-                transition={{ duration: 0.6 }}
-              >
-                  <Card
-                    isBlurred
-                    className="border-none bg-background/60 dark:bg-default-100/50 max-auto"
-                    shadow="sm"
-                  >
-                    <CardHeader>
-                      <div className="relative col-span-6 md:col-span-4">
-                      <div className={subtitle({color:"blue" , class: "w-full text-lg font-bold lg:text-xl max-w-xl mt-4 mx-auto" })}>
-                      {item.shortDescription}
-                      </div>
-                      </div>
-                    </CardHeader>
-                    <CardBody>
-                      <div className="grid grid-cols-6 md:grid-cols-12 gap-2 md:gap-1 items-center justify-center"> 
-                        <div className="flex flex-col col-span-6 md:col-span-8">
-                          <div className="flex justify-between items-start">
-                            <div className="flex flex-col gap-0">
-                              <h3 className="font-semibold text-default-600">  {item.description}
-                              </h3>
-                              <p className="text-small text-foreground/80">   {item.text}      </p>
+    <ReactLenis root>
+       <section  className="items-center justify-center gap-4 py-8 md:py-10"> 
+          <div className="sticky top-0 grid sm:grid-cols-3 gap-14">
+              <div> 
+                  <div> 
+                      <span className={title({size:"lg"})}>The Loud&nbsp;</span>
+                      <span className={title({size:"lg", color: "blue"})}>  Voice &nbsp; </span> <br /> 
+                      <span className={title({ size:"lg"  })}>of your Brand &nbsp;</span>
+                  </div>
+                  <p className="w-full   text-lg lg:text-xl font-normal text-default-500 block max-w-full">
+                  We know what’s going on. <br/>
+                  You need top-notch design to stand out in the tech world, but hiring in-house designers can be costly and time-consuming. 
+                  <br/>
+                  That’s when Q comes in.            </p> 
+              </div>
+              <div className="sticky top-0 max-w-[900px]  py-8 md:py-10 col-span-2">
+            
+                <section ref={scrollRef} className="sticky top-0 grid grid-rows-5 w-full gap-6  ">
+                    { services.map((item,key) => (
+                    <AnimatePresence  >
+                        {visibleCards && (
+                        <motion.div 
+                        className="sticky top-0"
+                      initial={{ opacity: 0.5, y: 40 }}
+                      animate={visibleCards[key] ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} 
+                      exit={{ opacity:  0 }}
+                      transition={{ duration: 0.6 }}
+                    >
+                        <Card
+                          isBlurred
+                          className="sticky top-0 transition-all duration-300   align-bottom object-cover rounded-md border-none bg-background/60 dark:bg-default-100/50 max-auto"
+                          shadow="sm"
+                        >
+                          <CardHeader>
+                            <div className="relative col-span-6 md:col-span-4">
+                            <div className={subtitle({color:"blue" , class: "w-full text-lg font-bold lg:text-xl max-w-xl mt-4 mx-auto" })}>
+                            {item.shortDescription}
                             </div>
-                            
-                          </div>
+                            </div>
+                          </CardHeader>
+                          <CardBody>
+                            <div className="grid grid-cols-6 md:grid-cols-12 gap-2 md:gap-1 items-center justify-center"> 
+                              <div className="flex flex-col col-span-6 md:col-span-8">
+                                <div className="flex justify-between items-start">
+                                  <div className="flex flex-col gap-0">
+                                    <h3 className="font-semibold text-default-600">  {item.description}
+                                    </h3>
+                                    <p className="text-small text-foreground/80">   {item.text}      </p>
+                                  </div>
+                                  
+                                </div>
 
-                          
-                        </div>
-                      </div>
-                    </CardBody>
-                  </Card>
-                  </motion.div>)}
-                </AnimatePresence>
-              ))}
-          </section>
+                                
+                              </div>
+                            </div>
+                          </CardBody>
+                        </Card>
+                        </motion.div>)}
+                      </AnimatePresence>
+                    ))}
+                </section>
+              </div>
+              
+          
         </div>
-        
-    
-  </div>
-  </section>
+        </section>
+      </ReactLenis>
+   
   );
 };
