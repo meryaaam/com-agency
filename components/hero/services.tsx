@@ -91,10 +91,10 @@ export const Services = () => {
 
   return (
     <ReactLenis root>
-    <main className='items-center justify-center gap-4 py-8 md:py-10'>
+    <main className='items-center justify-center  gap-4 py-8 md:py-10'>
       
       <section className=''>
-        <div className='grid grid-cols-2 px-8 gap-5'>
+        <div className='grid grid-cols-2 px-8 gap-5 pb-3'>
           <div className='sticky top-0 h-screen place-content-center'>
               
               <div> 
@@ -114,7 +114,7 @@ export const Services = () => {
              
             <div className="max-w-[900px]  py-8 md:py-10 col-span-2">
           
-          <section  className="sticky top-0  grid grid-rows-5 w-full gap-6  ">
+          <section  className="sticky top-0  grid grid-rows-5 w-full gap-6 pb-2 ">
               { services.map((item,key) => (
               
                 (visibleCards &&  
