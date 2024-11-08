@@ -1,12 +1,7 @@
  
-import Hero from "@/components/hero/hero"; 
-import { Introduction } from "@/components/hero/introduction";
-import FadeUp from "@/components/hero/fade-up";
-import Tricker from "@/components/hero/ticker";
+import Hero from "@/components/hero/hero";  
 import { Services } from "@/components/hero/services"; 
-import React from 'react'; 
-import Socials from "@/animations/socials"; 
-import ServicesWrapper from "@/components/hero/services-wrapper";
+import React from 'react';  
  
 export default function Home() {
   
@@ -14,7 +9,7 @@ export default function Home() {
     <section>
         <Hero /> 
         <Services />   
-        <Tricker/> 
+        
       </section>
          
   );
