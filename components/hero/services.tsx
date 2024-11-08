@@ -68,13 +68,12 @@ export const Services = () => {
   useEffect(() => {
     const handleScroll = () => {
       const newVisibleCards: VisibleCards = {};
-      const scrollY = window.scrollY;
-      const scrollContainer = scrollRef.current;
+      const scrollY = window.scrollY; 
    
       services.forEach((item, index) => {
         const triggerPoint = (index + 1) * 300;  
         newVisibleCards[index] = scrollY > triggerPoint && scrollY < triggerPoint + 300; 
-        newVisibleCards[index+1] = true; 
+        newVisibleCards[index] = true; 
       });
 
       setVisibleCards(newVisibleCards);
@@ -92,10 +91,14 @@ export const Services = () => {
 
   return (
     <ReactLenis root>
-       <section  className="items-center justify-center gap-4 py-8 md:py-10"> 
-          <div className="sticky top-0 grid sm:grid-cols-3 gap-14">
+    <main className='items-center justify-center gap-4 py-8 md:py-10'>
+      
+      <section className=''>
+        <div className='grid grid-cols-2 px-8 gap-5'>
+          <div className='sticky top-0 h-screen place-content-center'>
+              
               <div> 
-                  <div> 
+                  <div  className='tracking-tight leading-[170%]'> 
                       <span className={title({size:"lg"})}>The Loud&nbsp;</span>
                       <span className={title({size:"lg", color: "blue"})}>  Voice &nbsp; </span> <br /> 
                       <span className={title({ size:"lg"  })}>of your Brand &nbsp;</span>
@@ -106,58 +109,57 @@ export const Services = () => {
                   <br/>
                   That’s when Q comes in.            </p> 
               </div>
-              <div className="sticky top-0 max-w-[900px]  py-8 md:py-10 col-span-2">
-            
-                <section ref={scrollRef} className="sticky top-0 grid grid-rows-5 w-full gap-6  ">
-                    { services.map((item,key) => (
-                    <AnimatePresence  >
-                        {visibleCards && (
-                        <motion.div 
-                        className="sticky top-0"
-                      initial={{ opacity: 0.5, y: 40 }}
-                      animate={visibleCards[key] ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} 
-                      exit={{ opacity:  0 }}
-                      transition={{ duration: 0.6 }}
-                    >
-                        <Card
-                          isBlurred
-                          className="sticky top-0 transition-all duration-300   align-bottom object-cover rounded-md border-none bg-background/60 dark:bg-default-100/50 max-auto"
-                          shadow="sm"
-                        >
-                          <CardHeader>
-                            <div className="relative col-span-6 md:col-span-4">
-                            <div className={subtitle({color:"blue" , class: "w-full text-lg font-bold lg:text-xl max-w-xl mt-4 mx-auto" })}>
-                            {item.shortDescription}
-                            </div>
-                            </div>
-                          </CardHeader>
-                          <CardBody>
-                            <div className="grid grid-cols-6 md:grid-cols-12 gap-2 md:gap-1 items-center justify-center"> 
-                              <div className="flex flex-col col-span-6 md:col-span-8">
-                                <div className="flex justify-between items-start">
-                                  <div className="flex flex-col gap-0">
-                                    <h3 className="font-semibold text-default-600">  {item.description}
-                                    </h3>
-                                    <p className="text-small text-foreground/80">   {item.text}      </p>
-                                  </div>
-                                  
-                                </div>
-
-                                
-                              </div>
-                            </div>
-                          </CardBody>
-                        </Card>
-                        </motion.div>)}
-                      </AnimatePresence>
-                    ))}
-                </section>
-              </div>
-              
+            </div>
+          <div className='grid gap-2'>
+             
+            <div className="max-w-[900px]  py-8 md:py-10 col-span-2">
           
+          <section  className="sticky top-0  grid grid-rows-5 w-full gap-6  ">
+              { services.map((item,key) => (
+              
+                (visibleCards &&  
+                 
+                 <Card
+                    isBlurred
+                    className="transition-all duration-300  border-none bg-background/60 dark:bg-default-100/50 max-auto"
+                    shadow="sm"
+                  >
+                    <CardHeader>
+                      <div className="relative col-span-6 md:col-span-4">
+                      <div className={subtitle({color:"blue" , class: "w-full text-lg font-bold lg:text-xl max-w-xl mt-4 mx-auto" })}>
+                      {item.shortDescription}
+                      </div>
+                      </div>
+                    </CardHeader>
+                    <CardBody>
+                      <div className="grid grid-cols-6 md:grid-cols-12 gap-2 md:gap-1 items-center justify-center"> 
+                        <div className="flex flex-col col-span-6 md:col-span-8">
+                          <div className="flex justify-between items-start">
+                            <div className="flex flex-col gap-0">
+                              <h3 className="font-semibold text-default-600">  {item.description}
+                              </h3>
+                              <p className="text-small text-foreground/80">   {item.text}      </p>
+                            </div>
+                            
+                          </div>
+
+                          
+                        </div>
+                      </div>
+                    </CardBody>
+                  </Card> )
+              ))}
+          </section>
         </div>
-        </section>
-      </ReactLenis>
+         
+         
+          </div>
+         
+        </div>
+      </section>
+      
+    </main>
+  </ReactLenis>
    
   );
 };

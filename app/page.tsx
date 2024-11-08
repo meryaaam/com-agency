@@ -6,6 +6,7 @@ import FadeUp from "@/components/hero/fade-up";
 import Tricker from "@/components/hero/ticker";
 import { Services } from "@/components/hero/services"; 
 import React from 'react'; 
+import HorizontalWrapper from "@/common/HorizontalWrapper";
 
 export default function Home() {
   
