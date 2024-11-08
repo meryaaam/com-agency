@@ -1,9 +1,10 @@
 'use client';
 
 import { Link } from '@nextui-org/link';
-import { motion, useSpring } from 'framer-motion';
+import { color, motion, useSpring } from 'framer-motion';
 import React, { useState, MouseEvent, useRef } from 'react';
 import { button as buttonStyles } from "@nextui-org/theme"; 
+import { title } from '../primitives';
 
 interface ImageItem {
   img: string;
@@ -80,14 +81,23 @@ function ImageReveal2() {
   };
  
   return (
-    <section
+    <section className='flex flex-col items-center justify-center gap-4 py-8 md:py-10'>
+    <div
       ref={containerRef}
       onMouseMove={handleMove}
-      className='relative w-full mx-auto p-4'
+      className='relative '
     >
-        <div className='absolute top-0 left-0 w-full h-full'>
-            dss
+         <div className='grid grid-cols-2 px-8 mb-5 gap-5'>
+            <div className=" ">
+            <span className={title({size:"md" , color:"green"} )}> Fresh from the Studio: Recent Work Highlights&nbsp;</span>
+            </div>
+            
         </div>
+        <br/>
+        <br/>
+        <br/> 
+
+
       {list.map((item) => (
         <div
           key={item.label}
@@ -96,7 +106,7 @@ function ImageReveal2() {
           onMouseLeave={() => handleImageInteraction(item, 0)}
           className='w-full py-5 cursor-pointer  text-center flex justify-between border-b last:border-none'
         >
-          <p className='font-bold lg:text-2xl '  style={{
+          <p className='font-bold lg:text-2xl mt-3 '  style={{
              
             fontFamily: 'inherit',
             fontWeight: '800', 
@@ -142,6 +152,7 @@ function ImageReveal2() {
           opacity: img.opacity,
         }}
       />
+    </div>
     </section>
   );
 }
