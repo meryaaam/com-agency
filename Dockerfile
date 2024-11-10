@@ -1,5 +1,6 @@
 FROM node:20.15.0-alpine AS base
 WORKDIR /app
+ENV HOSTNAME=${HOSTNAME} 
 COPY package*.json ./
 # Install dependencies only when needed
 FROM base AS deps

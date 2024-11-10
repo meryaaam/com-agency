@@ -28,6 +28,11 @@ services:
       context: ./ 
       target: dev
       dockerfile: Dockerfile
+      args:
+        - NEXT_PUBLIC_HOST=${NEXT_PUBLIC_HOST}
+    environment:
+      - NEXT_PUBLIC_HOST=${NEXT_PUBLIC_HOST}
+      - HOSTNAME=${NEXT_PUBLIC_HOST}
     volumes:
         - .:/app
         - /app/node_modules
