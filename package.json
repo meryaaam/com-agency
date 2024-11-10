@@ -23,6 +23,9 @@
 		"@nextui-org/theme": "2.2.11",
 		"@react-aria/ssr": "3.9.4",
 		"@react-aria/visually-hidden": "3.8.12",
+		"@react-three/drei": "^9.115.0",
+		"@react-three/fiber": "^8.17.10",
+		"@react-three/rapier": "^1.5.0",
 		"@studio-freight/lenis": "^1.0.42",
 		"@studio-freight/react-lenis": "^0.0.47",
 		"@uidotdev/usehooks": "^2.4.1",
@@ -31,12 +34,16 @@
 		"gsap": "^3.12.5",
 		"intl-messageformat": "^10.5.0",
 		"lenis": "^1.1.16",
+		"leva": "^0.9.35",
+		"meshline": "^3.3.1",
 		"next": "^14.2.16",
 		"next-themes": "^0.2.1",
-		"react": "18.3.1",
+		"react": "^18.3.1",
 		"react-aria": "^3.35.1",
 		"react-dom": "18.3.1",
-		"react-use-measure": "^2.1.1"
+		"react-lottie": "^1.2.4",
+		"react-use-measure": "^2.1.1",
+		"three": "^0.170.0"
 	},
 	"devDependencies": {
 		"@types/node": "20.5.7",

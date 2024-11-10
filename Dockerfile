@@ -1,7 +1,5 @@
 FROM node:20.15.0-alpine AS base
-WORKDIR /app
-ENV HOSTNAME=${HOSTNAME} 
-COPY package*.json ./
+
 # Install dependencies only when needed
 FROM base AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
@@ -58,6 +56,6 @@ CMD npm start
 
 FROM base as dev
 ENV NODE_ENV=development
-RUN npm install 
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-CMD npm run dev
+CMD ["npm", "run", "dev"]

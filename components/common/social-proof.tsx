@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import useMeasure from "react-use-measure";
  
 
+
 export const SocialProof = () => {
     
   const images = [
@@ -16,6 +17,7 @@ export const SocialProof = () => {
       '/images/hero/brand/6AbRyXI1vp9kRvdUWpFXQBuEI.svg', 
 
     ];
+ 
   const FAST_DURATION = 25;
   const SLOW_DURATION = 75;
 
