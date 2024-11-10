@@ -3,7 +3,7 @@ import { siteConfig } from '@/config/site';
 import { Link } from '@nextui-org/link';
 import React, { FormEvent, useLayoutEffect, useRef, useState } from 'react';
 import { DiscordIcon, GithubIcon, TwitterIcon } from './icons';
-import { ThemeSwitch } from './theme-switch';
+import { ThemeSwitch } from '../theme-switch';
 import { Input } from '@nextui-org/input';
 import { Button } from '@nextui-org/button';
  

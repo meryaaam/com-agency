@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { animate, motion, useMotionValue, useScroll } from 'framer-motion';
-import HorizontalScroll from "../horizontal-scroll"; 
+import HorizontalScroll from "../animations/horizontal-scroll"; 
 import { useEffect, useState } from "react";
 import useMeasure from "react-use-measure";
  
