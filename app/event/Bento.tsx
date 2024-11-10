@@ -242,11 +242,7 @@ const BentoBox1 = () => {
                                 s  
                     </AccordionItem>
                     ))}
-
-                   
-
-               
-                
+  
                 </Accordion>
               </div>
            
