@@ -236,12 +236,12 @@ const BentoBox1 = () => {
               <div className="text-left text-white mt-4">
               Event Highlights:
 
-              <Accordion defaultExpandedKeys={["2"]}>
-              {eventHighlight.map((item, key) => (
-                 <AccordionItem key={key} aria-label={item.title} title={item.title}>
-                                {item.description}
-                 </AccordionItem>
-                ))}
+              <Accordion isCompact disabledKeys={["0","1","2","3","4","5"]}>
+                {eventHighlight.map((item, key) => (
+                    <AccordionItem key={key} aria-label={item.title} title={item.title} >
+                                s  
+                    </AccordionItem>
+                    ))}
 
                    
 
