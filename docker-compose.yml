@@ -1,5 +1,27 @@
-version: '3.8'
+
 services:
+ 
+  traefik:
+    image: traefik:v3.1.6
+    command: "--configFile=/config/traefik.yml"
+    ports:
+      - "80:80"
+      - "443:443"
+      - "8080:8080"
+    volumes:
+      - ".:/etc/traefik"
+      - "./proxy/traefik.yml:/config/traefik.yml:ro"
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "./certs/localhost.crt:/certs/localhost.crt:ro"
+      - "./certs/localhost.key:/certs/localhost.key:ro"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.traefik.rule=Host(`proxy.localhost`)"
+      - "traefik.http.routers.traefik.entrypoints=websecure"
+      - "traefik.http.services.traefik.loadbalancer.server.port=8080"
+    networks:
+      - localhost_net
+
   app:
     image: com-app
     build:
@@ -10,5 +32,21 @@ services:
         - .:/app
         - /app/node_modules
         - /app/.next
-    ports:
-      - "3000:3000"
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.app.rule=Host(`${NEXT_PUBLIC_HOST}`)"
+      - "traefik.http.routers.app.entrypoints=websecure"
+      - "traefik.http.services.app.loadbalancer.server.port=3000"
+      - "traefik.http.middlewares.app-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.nas.tls=true"  
+      - "info.url=https://${NEXT_PUBLIC_HOST}"
+    networks:
+      - localhost_net
+
+
+
+
+
+networks:
+  localhost_net:
+    external: true

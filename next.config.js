@@ -13,8 +13,8 @@ const nextConfig = {
       ],
       remotePatterns: [
         {
-          protocol: 'http',
-          hostname: 'localhost',
+          protocol: 'https',
+          hostname: process.env.NEXT_PUBLIC_API_URL.replace(/^https?:\/\//, ''),
         },
          
       ],
