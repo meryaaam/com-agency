@@ -27,6 +27,8 @@ This repository is a Next.js application developed in TypeScript. It leverages G
 - **3D Support** to enhance user interaction
 - **NextUI** for responsive and customizable UI components
 
+
+## 🔧 Technologies Used
 - ⚛️ **Next.js** - Framework for server-side rendering and static site generation
 - 🟦 **TypeScript** - Strongly typed programming language for safer and scalable code
 - 🐳 **Docker** - Containerization platform for consistent development and deployment environments
