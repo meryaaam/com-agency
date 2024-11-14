@@ -44,4 +44,9 @@ This repository is a Next.js application developed in TypeScript. It leverages G
 - [Traefik](https://traefik.io/) (configured in `docker-compose.yml`)
 
 
+### Installation
 
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/meryaaam/com-agency.git
+   cd com-agency
