@@ -27,14 +27,13 @@ This repository is a Next.js application developed in TypeScript. It leverages G
 - **3D Support** to enhance user interaction
 - **NextUI** for responsive and customizable UI components
 
-## 🔧 Technologies Used
-- **Next.js**
-- **TypeScript**
-- **Docker**
-- **Traefik** (Reverse Proxy)
-- **GSAP** and **Framer Motion** for animations
-- **Three.js** for 3D elements (if needed)
-- **NextUI** for UI components
+- ⚛️ **Next.js** - Framework for server-side rendering and static site generation
+- 🟦 **TypeScript** - Strongly typed programming language for safer and scalable code
+- 🐳 **Docker** - Containerization platform for consistent development and deployment environments
+- 🚦 **Traefik** - Reverse proxy and load balancer, with SSL management
+- 🎞️ **GSAP** and **Framer Motion** - Libraries for animations and transitions
+- 🎥 **Three.js** - JavaScript library for 3D graphics (optional, as needed)
+- 🧩 **NextUI** - UI component library for building responsive interfaces
 
 ## 🚀 Getting Started
 
