@@ -36,3 +36,12 @@ This repository is a Next.js application developed in TypeScript. It leverages G
 - **Three.js** for 3D elements (if needed)
 - **NextUI** for UI components
 
+## 🚀 Getting Started
+
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [Docker](https://www.docker.com/)
+- [Traefik](https://traefik.io/) (configured in `docker-compose.yml`)
+
+
+
