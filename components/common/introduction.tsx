@@ -43,7 +43,7 @@ export const Introduction = () => {
                      
                     </svg>
                 </div>
-                <h3 className="mt-8 text-lg font-semibold text-black">Graphic Design                </h3>
+                <h3 className="mt-8 text-lg font-semibold text-black">Graphic Design </h3>
                 <p className="mt-4 text-base text-gray-600">Creates visually engaging content to convey your brand’s message and captivate audiences.</p>
             </div>
 
@@ -68,7 +68,7 @@ export const Introduction = () => {
                          d="M8.002 9.997a5 5 0 1 0 8.9 2.02"/>
                      </svg>
                           </div>
-                <h3 className="mt-8 text-lg font-semibold text-black">Marketing digital </h3>
+                <h3 className="mt-8 text-lg font-semibold text-black">Digital Marketing </h3>
                 <p className="mt-4 text-base text-gray-600">Boosts brand visibility and engages customers through targeted campaigns across digital and traditional platforms.</p>
             </div>
 
@@ -95,7 +95,7 @@ export const Introduction = () => {
 
                     
                 </div>
-                <h3 className="mt-8 text-lg font-semibold text-black">Development</h3>
+                <h3 className="mt-8 text-lg font-semibold text-black">Web Development</h3>
                 <p className="mt-4 text-base text-gray-600">Builds customized digital solutions—websites, apps, software—to meet your business needs and enhance user experience.
 
 </p>
