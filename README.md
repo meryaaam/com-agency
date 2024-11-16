@@ -1,53 +1,53 @@
-# Next.js & NextUI Template
+# 🚀 XCom
 
-This is a template for creating applications using Next.js 14 (app directory) and NextUI (v2).
+A Next.js project built with TypeScript, Docker, and animated with GSAP and Framer Motion. This project uses NextUI for UI components and includes 3D elements to enhance user experience. The application is set up with Traefik for reverse proxying and domain management.
 
-[Try it on CodeSandbox](https://githubbox.com/nextui-org/next-app-template)
+## 📑 Table of Contents
+- [📖 Project Overview](#project-overview)
+- [✨ Features](#features)
+- [🔧 Technologies Used](#technologies-used)
+- [🚀 Getting Started](#getting-started)
+- [🐳 Docker Setup](#docker-setup)
+- [⚙️ Traefik Configuration](#traefik-configuration)
+- [📄 Usage](#usage)
+- [📁 Project Structure](#project-structure)
+- [🤝 Contributing](#contributing)
+- [📝 License](#license)
 
-## Technologies Used
+## 📖 Project Overview
 
-- [Next.js 14](https://nextjs.org/docs/getting-started)
-- [NextUI v2](https://nextui.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Tailwind Variants](https://tailwind-variants.org)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Framer Motion](https://www.framer.com/motion/)
-- [next-themes](https://github.com/pacocoursey/next-themes)
+This repository is a Next.js application developed in TypeScript. It leverages GSAP and Framer Motion for animations, includes 3D interactive components, and uses [NextUI](https://nextui.org/) for styling. Docker is used for containerization, and Traefik is configured as a reverse proxy to manage domain routing and SSL certificates.
 
-## How to Use
+## ✨ Features
+- **Next.js** as the framework for server-side rendering and static site generation
+- **TypeScript** for strong typing and development efficiency
+- **Docker** for containerized deployments
+- **Traefik** for reverse proxying and SSL certificate management
+- **GSAP** and **Framer Motion** for animations
+- **3D Support** to enhance user interaction
+- **NextUI** for responsive and customizable UI components
 
-### Use the template with create-next-app
 
-To create a new project based on this template using `create-next-app`, run the following command:
+## 🔧 Technologies Used
+- ⚛️ **Next.js** - Framework for server-side rendering and static site generation
+- 🟦 **TypeScript** - Strongly typed programming language for safer and scalable code
+- 🐳 **Docker** - Containerization platform for consistent development and deployment environments
+- 🚦 **Traefik** - Reverse proxy and load balancer, with SSL management
+- 🎞️ **GSAP** and **Framer Motion** - Libraries for animations and transitions
+- 🎥 **Three.js** - JavaScript library for 3D graphics (optional, as needed)
+- 🧩 **NextUI** - UI component library for building responsive interfaces
 
-```bash
-npx create-next-app -e https://github.com/nextui-org/next-app-template
-```
+## 🚀 Getting Started
 
-### Install dependencies
+### Prerequisites
+- [Node.js](https://nodejs.org/) (v14 or higher)
+- [Docker](https://www.docker.com/)
+- [Traefik](https://traefik.io/) (configured in `docker-compose.yml`)
 
-You can use one of them `npm`, `yarn`, `pnpm`, `bun`, Example using `npm`:
 
-```bash
-npm install
-```
+### Installation
 
-### Run the development server
-
-```bash
-npm run dev
-```
-
-### Setup pnpm (optional)
-
-If you are using `pnpm`, you need to add the following code to your `.npmrc` file:
-
-```bash
-public-hoist-pattern[]=*@nextui-org/*
-```
-
-After modifying the `.npmrc` file, you need to run `pnpm install` again to ensure that the dependencies are installed correctly.
-
-## License
-
-Licensed under the [MIT license](https://github.com/nextui-org/next-app-template/blob/main/LICENSE).
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/meryaaam/com-agency.git
+   cd com-agency
