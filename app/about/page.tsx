@@ -1,8 +1,7 @@
 "use client" ;
 import { title } from "@/components/primitives";
-import { Image } from "@nextui-org/react";
-import ReviewPage from "./review";
-
+import { Image } from "@nextui-org/react"; 
+  
 export default function AboutPage() {
   return (
     <>
@@ -48,7 +47,10 @@ export default function AboutPage() {
          </div>
        </div>
      </section>
-     <ReviewPage/>
+     <div>
+    
+     </div>
+     
     </>
    
   );

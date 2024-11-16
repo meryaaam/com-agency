@@ -2,9 +2,9 @@
 import { title } from "@/components/primitives";
 import { Image } from "@nextui-org/react";
 
-export const RiviewPage = () => {
-    return (
-    <>
+export default function ReviewPage() {
+  return (
+     
      <section className="py-10 bg-gray-100 sm:py-16 lg:py-24">
     <div className="px-4 mx-auto max-w-7xl sm:px-6 lg:px-8">
         <div className="max-w-2xl mx-auto text-center">
@@ -16,7 +16,7 @@ export const RiviewPage = () => {
             <div className="overflow-hidden bg-white rounded-md">
                 <div className="px-5 py-6">
                     <div className="flex items-center justify-between">
-                        <Image className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="images/1.jpg" alt="" />
+                        <img className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/7/avatar-1.jpg" alt="" />
                         <div className="min-w-0 ml-3 mr-auto">
                             <p className="text-base font-semibold text-black truncate">Darrell Steward</p>
                             <p className="text-sm text-gray-600 truncate">@darrels</p>
@@ -41,7 +41,7 @@ export const RiviewPage = () => {
             <div className="overflow-hidden bg-white rounded-md">
                 <div className="px-5 py-6">
                     <div className="flex items-center justify-between">
-                        <Image className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="images/1.jpg" alt="" />
+                        <img className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/7/avatar-2.jpg" alt="" />
                         <div className="min-w-0 ml-3 mr-auto">
                             <p className="text-base font-semibold text-black truncate">Leslie Alexander</p>
                             <p className="text-sm text-gray-600 truncate">@lesslie</p>
@@ -66,7 +66,7 @@ export const RiviewPage = () => {
             <div className="overflow-hidden bg-white rounded-md">
                 <div className="px-5 py-6">
                     <div className="flex items-center justify-between">
-                        <Image className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="images/1.jpg" alt="" />
+                        <img className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/7/avatar-3.jpg" alt="" />
                         <div className="min-w-0 ml-3 mr-auto">
                             <p className="text-base font-semibold text-black truncate">Jenny Wilson</p>
                             <p className="text-sm text-gray-600 truncate">@jennywilson</p>
@@ -91,7 +91,7 @@ export const RiviewPage = () => {
             <div className="overflow-hidden bg-white rounded-md">
                 <div className="px-5 py-6">
                     <div className="flex items-center justify-between">
-                        <Image className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="images/1.jpg" alt="" />
+                        <img className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/7/avatar-4.jpg" alt="" />
                         <div className="min-w-0 ml-3 mr-auto">
                             <p className="text-base font-semibold text-black truncate">Kristin Watson</p>
                             <p className="text-sm text-gray-600 truncate">@kristinwatson2</p>
@@ -116,7 +116,7 @@ export const RiviewPage = () => {
             <div className="overflow-hidden bg-white rounded-md">
                 <div className="px-5 py-6">
                     <div className="flex items-center justify-between">
-                        <Image className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="images/1.jpg" alt="" />
+                        <img className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/7/avatar-5.jpg" alt="" />
                         <div className="min-w-0 ml-3 mr-auto">
                             <p className="text-base font-semibold text-black truncate">Guy Hawkins</p>
                             <p className="text-sm text-gray-600 truncate">@jennywilson</p>
@@ -141,7 +141,7 @@ export const RiviewPage = () => {
             <div className="overflow-hidden bg-white rounded-md">
                 <div className="px-5 py-6">
                     <div className="flex items-center justify-between">
-                        <Image className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="images/1.jpg" alt="" />
+                        <img className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/7/avatar-6.jpg" alt="" />
                         <div className="min-w-0 ml-3 mr-auto">
                             <p className="text-base font-semibold text-black truncate">Marvin McKinney</p>
                             <p className="text-sm text-gray-600 truncate">@darrels</p>
@@ -166,7 +166,7 @@ export const RiviewPage = () => {
             <div className="overflow-hidden bg-white rounded-md">
                 <div className="px-5 py-6">
                     <div className="flex items-center justify-between">
-                        <Image className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="images/1.jpg" alt="" />
+                        <img className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/7/avatar-7.jpg" alt="" />
                         <div className="min-w-0 ml-3 mr-auto">
                             <p className="text-base font-semibold text-black truncate">Annette Black</p>
                             <p className="text-sm text-gray-600 truncate">@darrels</p>
@@ -191,7 +191,7 @@ export const RiviewPage = () => {
             <div className="overflow-hidden bg-white rounded-md">
                 <div className="px-5 py-6">
                     <div className="flex items-center justify-between">
-                        <Image className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="images/1.jpg" alt="" />
+                        <img className="flex-shrink-0 object-cover w-10 h-10 rounded-full" src="https://cdn.rareblocks.xyz/collection/celebration/images/testimonials/7/avatar-8.jpg" alt="" />
                         <div className="min-w-0 ml-3 mr-auto">
                             <p className="text-base font-semibold text-black truncate">Floyd Miles</p>
                             <p className="text-sm text-gray-600 truncate">@darrels</p>
@@ -216,7 +216,7 @@ export const RiviewPage = () => {
     </div>
 </section>
 
-    </>
+    
    
   );
 }
