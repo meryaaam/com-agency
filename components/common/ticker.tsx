@@ -1,10 +1,10 @@
 "use client";
+import { useEffect, useRef } from "react";
 
 import { useScroll } from "framer-motion";
-import { useEffect, useRef } from "react";
 import Lenis from "@studio-freight/lenis";
-import { projects } from "../../data/projects";
-import ServicesWrapper from "./services-wrapper";
+//import { projects } from "../../data/projects";
+//import ServicesWrapper from "./services-wrapper";
 
 export default function Tricker() {
   const container = useRef(null);
@@ -26,7 +26,7 @@ export default function Tricker() {
 
   return (
     <main className="relative mt-[50vh]">
-      {projects.map((project, index) => {
+      {/*projects.map((project, index) => {
         const targetScale = 1 - (projects.length - index) * 0.05;
         return (
           <ServicesWrapper
@@ -38,7 +38,7 @@ export default function Tricker() {
             targetScale={targetScale}
           />
         );
-      })}
+      })*/}
     </main>
   );
 }
