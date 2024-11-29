@@ -2,6 +2,8 @@ FROM node:20.15.0-alpine AS base
 
 RUN apk update && apk add --no-cache sudo bash
 RUN sudo apk add npm
+RUN npm install -g npm@latest
+
 # Check versions
 RUN node -v
 RUN npm -v
