@@ -3,8 +3,8 @@
 import { Link } from '@nextui-org/link';
 import { color, motion, useSpring } from 'framer-motion';
 import React, { useState, MouseEvent, useRef } from 'react';
-import { button as buttonStyles } from "@nextui-org/theme"; 
-import { title } from '../primitives';
+import { button as buttonStyles } from "@nextui-org/theme";  
+import { title } from '@/components/primitives';
 
 interface ImageItem {
   img: string;
