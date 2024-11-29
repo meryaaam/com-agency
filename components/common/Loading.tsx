@@ -39,11 +39,25 @@ const Loading: React.FC = () => {
     <div style={wrapperStyle}>
       <div style={{ ...circleStyle }} />
       <div style={{ ...circleStyle, left: "45%", animationDelay: "0.2s" }} />
-      <div style={{ ...circleStyle, left: "auto", right: "15%", animationDelay: "0.3s" }} />
+      <div
+        style={{
+          ...circleStyle,
+          left: "auto",
+          right: "15%",
+          animationDelay: "0.3s",
+        }}
+      />
 
       <div style={{ ...shadowStyle }} />
       <div style={{ ...shadowStyle, left: "45%", animationDelay: "0.2s" }} />
-      <div style={{ ...shadowStyle, left: "auto", right: "15%", animationDelay: "0.3s" }} />
+      <div
+        style={{
+          ...shadowStyle,
+          left: "auto",
+          right: "15%",
+          animationDelay: "0.3s",
+        }}
+      />
 
       <style>
         {`

@@ -4,13 +4,11 @@ import React, { useState } from "react";
 import Image from "next/image";
 
 interface HorizontalScrollProps {
-  image: string; 
+  image: string;
 }
 
 const HorizontalScroll: React.FC<HorizontalScrollProps> = ({ image }) => {
-    
-  
-    const [showOverlay, setShowOverlay] = useState(false);
+  const [showOverlay, setShowOverlay] = useState(false);
 
   return (
     <motion.div
@@ -36,12 +34,11 @@ const HorizontalScroll: React.FC<HorizontalScrollProps> = ({ image }) => {
               exit={{ y: 10 }}
             >
               <span>Explore Now</span>
-              
             </motion.h1>
           </motion.div>
         )}
       </AnimatePresence>
-      <Image src={image} alt={image} fill objectFit="contain"  />
+      <Image src={image} alt={image} fill objectFit="contain" />
     </motion.div>
   );
 };

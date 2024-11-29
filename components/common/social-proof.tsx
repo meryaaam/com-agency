@@ -1,23 +1,18 @@
 "use client";
 
-
 import { animate, motion, useMotionValue } from "framer-motion";
-import HorizontalScroll from "../animations/horizontal-scroll"; 
+import HorizontalScroll from "../animations/horizontal-scroll";
 import { useEffect, useState } from "react";
 import useMeasure from "react-use-measure";
- 
-
 
 export const SocialProof = () => {
-    
   const images = [
-      '/images/hero/brand/1cztq58Fj7to7zz8dMarT0oz8.svg',
-      '/images/hero/brand/ABZm12rBwLLZEO4MvzbUsQepmlU.svg',
-      '/images/hero/brand/InIlH0H8DraCdfCKhBGQrQpLZbY.svg',
-      '/images/hero/brand/6AbRyXI1vp9kRvdUWpFXQBuEI.svg', 
+    "/images/hero/brand/1cztq58Fj7to7zz8dMarT0oz8.svg",
+    "/images/hero/brand/ABZm12rBwLLZEO4MvzbUsQepmlU.svg",
+    "/images/hero/brand/InIlH0H8DraCdfCKhBGQrQpLZbY.svg",
+    "/images/hero/brand/6AbRyXI1vp9kRvdUWpFXQBuEI.svg",
+  ];
 
-    ];
- 
   const FAST_DURATION = 25;
   const SLOW_DURATION = 75;
 
@@ -56,25 +51,22 @@ export const SocialProof = () => {
   }, [rerender, xTranslation, duration, width]);
 
   return (
-    
     <motion.div
-    className="left-0 flex "
-    style={{ x: xTranslation , gap: '3rem' }}
-    ref={ref}
-    onHoverStart={() => {
-      setMustFinish(true);
-      setDuration(SLOW_DURATION);
-    }}
-    onHoverEnd={() => {
-      setMustFinish(true);
-      setDuration(FAST_DURATION);
-    }}
-  >
-    {[...images, ...images].map((item, idx) => (
-      <HorizontalScroll image={`${item}`} key={idx} />
-    ))}
-  </motion.div>
-
-    
+      className="left-0 flex "
+      style={{ x: xTranslation, gap: "3rem" }}
+      ref={ref}
+      onHoverStart={() => {
+        setMustFinish(true);
+        setDuration(SLOW_DURATION);
+      }}
+      onHoverEnd={() => {
+        setMustFinish(true);
+        setDuration(FAST_DURATION);
+      }}
+    >
+      {[...images, ...images].map((item, idx) => (
+        <HorizontalScroll image={`${item}`} key={idx} />
+      ))}
+    </motion.div>
   );
 };

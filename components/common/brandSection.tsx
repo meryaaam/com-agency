@@ -7,7 +7,11 @@ interface BrandSectionProps {
   isActive: boolean;
 }
 
-const BrandSection: React.FC<BrandSectionProps> = ({ title, imageUrl, isActive }) => {
+const BrandSection: React.FC<BrandSectionProps> = ({
+  title,
+  imageUrl,
+  isActive,
+}) => {
   return (
     <div className="h-screen flex items-center justify-center bg-gray-200 relative">
       <div className="absolute inset-0">
@@ -22,7 +26,10 @@ const BrandSection: React.FC<BrandSectionProps> = ({ title, imageUrl, isActive }
       </div>
       <motion.h1
         className="text-4xl"
-        style={{ color: isActive ? 'cyan' : 'blue', opacity: isActive ? 1 : 0.5 }}
+        style={{
+          color: isActive ? "cyan" : "blue",
+          opacity: isActive ? 1 : 0.5,
+        }}
         initial={{ opacity: 0 }}
         animate={{ opacity: isActive ? 1 : 0 }}
         transition={{ duration: 0.5 }}
