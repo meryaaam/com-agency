@@ -1,9 +1,7 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import { subtitle, title } from "../primitives";
-import { AnimatePresence, motion, useIsPresent, useScroll, useTransform } from "framer-motion";
-import SectionLayout from "@/common/SectionLayout";
-import HorizontalWrapper from "@/common/HorizontalWrapper";
+import { subtitle, title } from "../../primitives";
+import { AnimatePresence, motion, useIsPresent, useScroll, useTransform } from "framer-motion"; 
 import { Card, CardBody, CardHeader, Image } from "@nextui-org/react";
 import ReactLenis from "@studio-freight/react-lenis";
 
