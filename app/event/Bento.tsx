@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect, useRef } from "react";
+
 import { motion } from "framer-motion";
 import Tag3d from "@/components/animations/3dtag";
 import { Accordion, AccordionItem } from "@nextui-org/react";
@@ -19,12 +20,12 @@ const eventHighlight = [
   {
     title: "Interactive Demo Stations",
     description:
-      "Set up areas where attendees can explore your services, try out interactive demos, or view before-and-after project case studies. For example, a virtual reality corner could let guests explore environments you've designed.",
+      "Set up areas where attendees can explore your services, try out interactive demos, or view before-and-after project case studies. For example, a virtual reality corner could let guests explore environments you&apos;ve designed.",
   },
   {
     title: "Industry Panel Discussion",
     description:
-      "A panel of experts discusses trends and challenges in the industry, underscoring your agency's thought leadership and positioning you as a trusted advisor. Consider inviting notable industry leaders for added appeal.",
+      "A panel of experts discusses trends and challenges in the industry, underscoring your agency&apos;s thought leadership and positioning you as a trusted advisor. Consider inviting notable industry leaders for added appeal.",
   },
   {
     title: "Networking Reception",
@@ -34,7 +35,7 @@ const eventHighlight = [
   {
     title: "Future Vision Q&A",
     description:
-      "Offer a breakout session or one-on-one consultations for attendees to ask specific questions about your services, pricing, and previous projects, helping build trust and clarity around your agency's value.",
+      "Offer a breakout session or one-on-one consultations for attendees to ask specific questions about your services, pricing, and previous projects, helping build trust and clarity around your agency&apos;s value.",
   },
 ];
 const lineWidth = 80;
@@ -239,7 +240,7 @@ const AWSIcon = () => {
         <p className="text-gray-400 text-sm">
           Join us at our booth or visit our office to experience our services
           firsthand. You can also connect with us online via our website and
-          social media channels. Whether in person or virtually, we're here to
+          social media channels. Whether in person or virtually, we&apos;re here to
           help you explore how our agency can bring your vision to life!
         </p>
       </div>
@@ -291,9 +292,9 @@ const BentoBox1 = () => {
               </p>
               <div className="text-left text-white p-6 mt-4">
                 This event invites prospective clients, industry partners, and
-                key stakeholders to an immersive showcase of your agency's
+                key stakeholders to an immersive showcase of your agency&apos;s
                 unique offerings and expertise. Held at a modern, tech-driven
-                venue, Future Vision presents your agency's latest achievements,
+                venue, Future Vision presents your agencys latest achievements,
                 signature projects, and industry insights, highlighting how you
                 can help clients stay ahead of the competition. Through dynamic
                 presentations, live demonstrations, and hands-on experience

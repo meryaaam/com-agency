@@ -1,7 +1,5 @@
 "use client";
-
-import { useState } from "react";
-import { subtitle, title } from "../primitives";
+ 
 import { Link } from "@nextui-org/link";
 import { button as buttonStyles } from "@nextui-org/theme";
 
@@ -9,18 +7,6 @@ export const Introduction = () => {
   return (
     <section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
       <div className="inline-block max-w-full text-center justify-center margin-30px ">
-        {/* <div className="mb-8">
-      <Link
-        isExternal
-        style={{ color: "white" , borderColor:"none" , background: "linear-gradient(63deg, #f88ee6, #6179fe)" }} 
-        className={buttonStyles({ variant: "bordered", radius: "full"   })} 
-      > 
-        what we do
-        </Link>
-      
-      <br/>
-    </div>*/}
-
         <div className="w-full mt-12 mx-auto grid grid-cols-1 gap-12 text-center sm:grid-cols-2 md:grid-cols-3 lg:gap-y-16">
           <div>
             <div className="relative flex items-center justify-center mx-auto">
