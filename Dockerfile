@@ -1,5 +1,12 @@
 FROM node:20.15.0-alpine AS base
 
+RUN apk update && apk add --no-cache sudo bash
+RUN sudo apk add npm
+RUN npm install -g npm@latest
+
+# Check versions
+RUN node -v
+RUN npm -v
 # Install dependencies only when needed
 FROM base AS deps
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
