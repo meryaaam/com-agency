@@ -1,8 +1,9 @@
 "use client";
 
-import { Link } from "@nextui-org/link";
-import { color, motion, useSpring } from "framer-motion";
 import React, { useState, MouseEvent, useRef } from "react";
+
+import { Link } from "@nextui-org/link";
+import {  motion, useSpring } from "framer-motion";
 import { button as buttonStyles } from "@nextui-org/theme";
 import { title } from "../primitives";
 
@@ -11,6 +12,34 @@ interface ImageItem {
   label: string;
   description: string;
 }
+const list: ImageItem[] = [
+  {
+    img: "https://images.unsplash.com/photo-1682806816936-c3ac11f65112?q=80&w=1274&auto=format&fit=crop",
+    label: "Revamping User Experiences",
+    description: " A Web Design Overhaul for Digital Growt",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1681063762354-d542c03bbfc5?q=80&w=1274&auto=format&fit=crop",
+    label: "From Concept to Canvas",
+    description: "Crafting Visual Identities that Stand Out",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1679640034489-a6db1f096b70?q=80&w=1274&auto=format&fit=crop",
+    label: "Climbing the Ranks",
+    description: "An SEO Project That Drives Organic Growth",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1679482451632-b2e126da7142?q=80&w=1274&auto=format&fit=crop",
+    label: "Maximizing ROI",
+    description:
+      "Comprehensive Digital Marketing Campaigns for Business Success",
+  },
+  {
+    img: "https://images.unsplash.com/photo-1679482451632-b2e126da7142?q=80&w=1274&auto=format&fit=crop",
+    label: "Complete Digital Transformation",
+    description: "A Holistic Approach to Web Design, SEO, and Marketing",
+  },
+];
 
 function ImageReveal2() {
   const [img, setImg] = useState<{ src: string; alt: string; opacity: number }>(
@@ -24,34 +53,7 @@ function ImageReveal2() {
   const imageRef = useRef<HTMLImageElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const list: ImageItem[] = [
-    {
-      img: "https://images.unsplash.com/photo-1682806816936-c3ac11f65112?q=80&w=1274&auto=format&fit=crop",
-      label: "Revamping User Experiences",
-      description: " A Web Design Overhaul for Digital Growt",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1681063762354-d542c03bbfc5?q=80&w=1274&auto=format&fit=crop",
-      label: "From Concept to Canvas",
-      description: "Crafting Visual Identities that Stand Out",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1679640034489-a6db1f096b70?q=80&w=1274&auto=format&fit=crop",
-      label: "Climbing the Ranks",
-      description: "An SEO Project That Drives Organic Growth",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1679482451632-b2e126da7142?q=80&w=1274&auto=format&fit=crop",
-      label: "Maximizing ROI",
-      description:
-        "Comprehensive Digital Marketing Campaigns for Business Success",
-    },
-    {
-      img: "https://images.unsplash.com/photo-1679482451632-b2e126da7142?q=80&w=1274&auto=format&fit=crop",
-      label: "Complete Digital Transformation",
-      description: "A Holistic Approach to Web Design, SEO, and Marketing",
-    },
-  ];
+ 
 
   const spring = {
     stiffness: 150,
