@@ -1,10 +1,10 @@
 "use client"
 
-import { useScroll } from 'framer-motion'
-import { useEffect, useRef } from 'react'
-import Lenis from '@studio-freight/lenis'
-import { projects } from '../../data/projects'
-import ServicesWrapper from './services-wrapper'
+import { useScroll } from "framer-motion"
+import { useEffect, useRef } from "react"
+import Lenis from "@studio-freight/lenis"
+import { projects } from "../../data/projects"
+import ServicesWrapper from "./services-wrapper"
 
 export default function Tricker() {
   const container = useRef(null)

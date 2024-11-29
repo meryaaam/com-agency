@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import { Link } from '@nextui-org/link';
-import { color, motion, useSpring } from 'framer-motion';
-import React, { useState, MouseEvent, useRef } from 'react';
+import { Link } from "@nextui-org/link";
+import { color, motion, useSpring } from "framer-motion";
+import React, { useState, MouseEvent, useRef } from "react";
 import { button as buttonStyles } from "@nextui-org/theme"; 
-import { title } from '../primitives';
+import { title } from "../primitives";
 
 interface ImageItem {
   img: string;

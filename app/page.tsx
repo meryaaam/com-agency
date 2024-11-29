@@ -6,7 +6,7 @@ import LogoCarousel from "@/components/common/logo-carousel";
 import { Services } from "@/components/common/services"; 
 import { SocialProof } from "@/components/common/social-proof";
 import ImageReveal2 from "@/components/common/works";
-import React from 'react';  
+import React from "react";  
  
 export default function Home() {
   

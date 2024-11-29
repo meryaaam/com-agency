@@ -1,9 +1,9 @@
 "use client"
-import React from 'react'
-import Link from 'next/link'
-import Image from 'next/image'
-import { motion,useScroll, useTransform } from 'framer-motion'
-import { useRef } from 'react'
+import React from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { motion,useScroll, useTransform } from "framer-motion"
+import { useRef } from "react"
 
 interface CradProps {
     i : any ;

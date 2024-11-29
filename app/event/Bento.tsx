@@ -1,9 +1,8 @@
 "use client"
-import React, { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import Tag3d from '@/components/animations/3dtag';
-import { Accordion, AccordionItem } from '@nextui-org/react';
-import { title } from 'process';
+import React, { useState, useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import Tag3d from "@/components/animations/3dtag";
+import { Accordion, AccordionItem } from "@nextui-org/react"; 
 
 const logos = [
   "https://res.cloudinary.com/dl2adjye7/image/upload/v1716817722/Amazon_icon.svg_a4qmtg.png", 
