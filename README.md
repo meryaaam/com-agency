@@ -3,6 +3,7 @@
 A Next.js project built with TypeScript, Docker, and animated with GSAP and Framer Motion. This project uses NextUI for UI components and includes 3D elements to enhance user experience. The application is set up with Traefik for reverse proxying and domain management.
 
 ## 📑 Table of Contents
+
 - [📖 Project Overview](#project-overview)
 - [✨ Features](#features)
 - [🔧 Technologies Used](#technologies-used)
@@ -19,6 +20,7 @@ A Next.js project built with TypeScript, Docker, and animated with GSAP and Fram
 This repository is a Next.js application developed in TypeScript. It leverages GSAP and Framer Motion for animations, includes 3D interactive components, and uses [NextUI](https://nextui.org/) for styling. Docker is used for containerization, and Traefik is configured as a reverse proxy to manage domain routing and SSL certificates.
 
 ## ✨ Features
+
 - **Next.js** as the framework for server-side rendering and static site generation
 - **TypeScript** for strong typing and development efficiency
 - **Docker** for containerized deployments
@@ -27,8 +29,8 @@ This repository is a Next.js application developed in TypeScript. It leverages G
 - **3D Support** to enhance user interaction
 - **NextUI** for responsive and customizable UI components
 
-
 ## 🔧 Technologies Used
+
 - ⚛️ **Next.js** - Framework for server-side rendering and static site generation
 - 🟦 **TypeScript** - Strongly typed programming language for safer and scalable code
 - 🐳 **Docker** - Containerization platform for consistent development and deployment environments
@@ -40,10 +42,10 @@ This repository is a Next.js application developed in TypeScript. It leverages G
 ## 🚀 Getting Started
 
 ### Prerequisites
+
 - [Node.js](https://nodejs.org/) (v14 or higher)
 - [Docker](https://www.docker.com/)
 - [Traefik](https://traefik.io/) (configured in `docker-compose.yml`)
-
 
 ### Installation
 
@@ -51,3 +53,10 @@ This repository is a Next.js application developed in TypeScript. It leverages G
    ```bash
    git clone https://github.com/meryaaam/com-agency.git
    cd com-agency
+   ```
+
+## apply prettier
+```bash
+npx prettier --write "src/**/*.js"
+npx prettier --write "*"
+```
