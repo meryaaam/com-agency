@@ -1,0 +1,21 @@
+# Use Docker Compose to define your application stack
+FROM docker/compose:1.29.2
+
+# Copy the necessary files into the environment
+COPY . .
+
+# Run Docker Compose to start your services
+RUN docker-compose up -d --build
+
+# Wait for services to start (adjust time if needed)
+RUN sleep 10
+
+# Define a health check command to ensure the services are running
+HEALTHCHECK CMD curl -f http://localhost || exit 1
+
+# Optional: You can run additional tests or commands here
+# For example:
+# RUN curl -s http://localhost | grep "Expected Output"
+
+# Stop the services after the build to clean up
+RUN docker-compose down
