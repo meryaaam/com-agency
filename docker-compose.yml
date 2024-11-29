@@ -1,27 +1,6 @@
 
 services:
  
-  traefik:
-    image: traefik:v3.1.6
-    command: "--configFile=/config/traefik.yml"
-    ports:
-      - "80:80"
-      - "443:443"
-      - "8080:8080"
-    volumes:
-      - ".:/etc/traefik"
-      - "./proxy/traefik.yml:/config/traefik.yml:ro"
-      - "/var/run/docker.sock:/var/run/docker.sock:ro"
-      - "./certs/localhost.crt:/certs/localhost.crt:ro"
-      - "./certs/localhost.key:/certs/localhost.key:ro"
-    labels:
-      - "traefik.enable=true"
-      - "traefik.http.routers.traefik.rule=Host(`proxy.localhost`)"
-      - "traefik.http.routers.traefik.entrypoints=websecure"
-      - "traefik.http.services.traefik.loadbalancer.server.port=8080"
-    networks:
-      - localhost_net
-
   app:
     image: com-app
     build:
@@ -32,7 +11,7 @@ services:
         - NEXT_PUBLIC_HOST=${NEXT_PUBLIC_HOST}
     environment:
       - NEXT_PUBLIC_HOST=${NEXT_PUBLIC_HOST}
-      - NODE_ENV= "developmen"t
+      - NODE_ENV= "development"
       - HOSTNAME=${NEXT_PUBLIC_HOST}
     volumes:
         - .:/app
