@@ -45,50 +45,19 @@ export const Footer = () => {
                 Company
               </p>
 
-              <ul className="mt-6 space-y-4">
-                <li>
-                  <a
-                    href="#"
-                    title=""
-                    className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-                  >
-                    {" "}
-                    About{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    title=""
-                    className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-                  >
-                    {" "}
-                    Features{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    title=""
-                    className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-                  >
-                    {" "}
-                    Works{" "}
-                  </a>
-                </li>
-
-                <li>
-                  <a
-                    href="#"
-                    title=""
-                    className="flex text-base text-black transition-all duration-200 hover:text-blue-600 focus:text-blue-600"
-                  >
-                    {" "}
-                    Career{" "}
-                  </a>
-                </li>
+              <ul className="mt-6 space-y-2">
+                {siteConfig.navItems.map((item, index) => (
+                    <li className="flex"
+                    key={`${item}-${index}`}>
+                      <Link
+                        color={  "foreground" }
+                        href="#"
+                        size="lg"
+                      >
+                        {item.label}
+                      </Link>
+                    </li>
+                  ))}
               </ul>
             </div>
 
@@ -154,7 +123,7 @@ export const Footer = () => {
                 type="email"
                 label="Email"
                 variant="bordered"
-                defaultValue="junior@nextui.org"
+                
                 className="max-w-xs m-2"
               />
 
