@@ -41,97 +41,9 @@ const eventHighlight = [
 const lineWidth = 80;
 const lineHeight = 2;
 
-const LogoBeam = () => {
-  return (
-    <div className="flex items-center justify-center min-h-52">
-      <div className="relative flex items-center">
-        <div className="bg-[#000] border border-white/30  rounded-2xl flex items-center justify-center w-14 h-14 p-4">
-          <img
-            src={logos[0]}
-            alt="Logo 1"
-            className="filter invert brightness-0"
-          />
-        </div>
-        <div
-          className="relative"
-          style={{
-            width: `${lineWidth}px`,
-            height: `${lineHeight}px`,
-            backgroundColor: "#FFFFFF",
-            overflow: "hidden",
-          }}
-        >
-          <motion.div
-            className="absolute top-0 left-0 h-full w-10 bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
-            initial={{ x: "-40px" }}
-            animate={{ x: `calc(${lineWidth}px + 40px)` }}
-            transition={{
-              repeat: Infinity,
-              duration: 0.5,
-              repeatDelay: 2.5,
-              ease: "linear",
-            }}
-            style={{ willChange: "transform" }}
-          />
-        </div>
-        <div className="relative bg-black border-2 border-white/70 rounded-2xl flex items-center justify-center w-16 h-16 p-4 overflow-hidden shadow-[0_0_15px_5px_#dbe0e2]">
-          <img
-            src={logos[1]}
-            alt="Logo 2"
-            className="filter invert brightness-0"
-          />
-          <motion.div
-            className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-transparent via-white to-transparent opacity-30"
-            initial={{ x: "-100%" }}
-            animate={{ x: "100%" }}
-            transition={{
-              duration: 2,
-              ease: "linear",
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-            style={{ willChange: "transform" }}
-          />
-        </div>
-        <div
-          className="relative"
-          style={{
-            width: `${lineWidth}px`,
-            height: `${lineHeight}px`,
-            backgroundColor: "#FFFFFF",
-            overflow: "hidden",
-          }}
-        >
-          <motion.div
-            className="absolute top-0 right-0 h-full w-10 bg-gradient-to-r from-transparent via-black to-transparent opacity-75"
-            initial={{ x: "40px" }}
-            animate={{ x: `calc(-${lineWidth}px - 40px)` }}
-            transition={{
-              repeat: Infinity,
-              duration: 0.5,
-              repeatDelay: 3.5,
-              ease: "linear",
-            }}
-            style={{ willChange: "transform" }}
-          />
-        </div>
-        <div className="bg-black border border-white/30 rounded-2xl flex items-center justify-center w-14 h-14 p-4">
-          <img
-            src={logos[2]}
-            alt="Logo 3"
-            className="filter invert brightness-0"
-          />
-        </div>
-      </div>
-    </div>
-  );
-};
+ 
 
-const data = [50, 40, 300, 320, 500, 350, 200, 230, 500];
-const maxData = Math.max(...data);
-const chartHeight = 400;
-const chartWidth = 800;
-
+ 
 const CardWithEffect = ({ children }: { children: React.ReactNode }) => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
   const [isHovered, setIsHovered] = useState(false);

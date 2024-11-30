@@ -3,5 +3,7 @@ export default function BlogLayout({
 }: {
   children: React.ReactNode;
 }) {
-  return <>{children}</>;
+  return <> 
+  {children}
+  </>;
 }
