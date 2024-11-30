@@ -23,27 +23,26 @@ services:
   app:
     image: com-app
     build:
-      context: ./
-      target: dev
+      context: ./ 
       dockerfile: Dockerfile
       args:
-        - NEXT_PUBLIC_HOST=${NEXT_PUBLIC_HOST}
+        - NEXT_PUBLIC_HOST=xcom.dev.localhost
     environment:
-      - NEXT_PUBLIC_HOST=${NEXT_PUBLIC_HOST}
+      - NEXT_PUBLIC_HOST=xcom.dev.localhost
       - NODE_ENV= "development"
-      - HOSTNAME=${NEXT_PUBLIC_HOST}
+      - HOSTNAME=xcom.dev.localhost
     volumes:
       - .:/app
       - /app/node_modules
       - /app/.next
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.app.rule=Host(`${NEXT_PUBLIC_HOST}`)"
+      - "traefik.http.routers.app.rule=Host(`xcom.dev.localhost`)"
       - "traefik.http.routers.app.entrypoints=websecure"
       - "traefik.http.services.app.loadbalancer.server.port=3000"
       - "traefik.http.middlewares.app-redirect.redirectscheme.scheme=https"
       - "traefik.http.routers.nas.tls=true"
-      - "info.url=https://${NEXT_PUBLIC_HOST}"
+      - "info.url=https://xcom.dev.localhost"
     networks:
       - localhost_net
 
