@@ -56,6 +56,7 @@ This repository is a Next.js application developed in TypeScript. It leverages G
    ```
 
 ## apply prettier
+
 ```bash
 npx prettier --write "src/**/*.js"
 npx prettier --write "*"
