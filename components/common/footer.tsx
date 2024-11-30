@@ -154,7 +154,7 @@ export const Footer = () => {
                 type="email"
                 label="Email"
                 variant="bordered"
-                defaultValue="junior@nextui.org"
+                
                 className="max-w-xs m-2"
               />
 

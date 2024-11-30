@@ -2,7 +2,7 @@ export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
   name: "XCom",
-  description: "Creative Agency .",
+  description: "Creative Agency",
   navItems: [
     {
       label: "Home",
@@ -65,10 +65,10 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    github: "https://github.com/meryaaam",
+    twitter: "https://twitter.com/meryamchouaiti",
+    docs: "#",
+    discord: "#",
+    sponsor: "#",
   },
 };
