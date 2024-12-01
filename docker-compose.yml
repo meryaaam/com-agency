@@ -31,6 +31,8 @@ services:
       - NEXT_PUBLIC_HOST=${NEXT_PUBLIC_HOST}
       - NODE_ENV= ${NODE_ENV}
       - HOSTNAME=${NEXT_PUBLIC_HOST}
+    ports:
+      - "3000:3000"
     volumes:
       - .:/app
       - /app/node_modules
