@@ -21,6 +21,9 @@ COPY / /root
 # TODO: log in to docker hub
 # See https://webapp.io/docs/advanced-workflows#logging-in-to-docker to learn how to log in to docker
 
+# Check if the network exists, and create it if it doesn't
+RUN docker network ls | grep localhost_net || docker network create localhost_net
+
 RUN REPEATABLE docker-compose build --parallel
 RUN docker-compose up -d
 
