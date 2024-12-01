@@ -1,6 +1,5 @@
-import Tag3d from "@/components/animations/3dtag";
-import { subtitle, title } from "@/components/primitives";
-import Bentodemo from "./Bento";
+ 
+import { subtitle, title } from "@/components/primitives"; 
 
 export default function EventPage() {
   return (
@@ -24,7 +23,7 @@ export default function EventPage() {
           </div>
         </div>
         <div className="flex flex-col items-center justify-center sm:flex-row gap-4 mt-32">
-          <Bentodemo />
+          
         </div>
       </div>
     </div>
