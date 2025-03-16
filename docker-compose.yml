@@ -3,7 +3,8 @@ services:
   app:
     image: node:20 
     build:
-      context: ./ 
+      context: ./
+      target: dev 
       dockerfile: Dockerfile
       args:
         - NEXT_PUBLIC_HOST=${NEXT_PUBLIC_HOST}
@@ -15,8 +16,7 @@ services:
     command: bash -c "npm install && npm run dev"
     
     environment:
-      - NEXT_PUBLIC_HOST=${NEXT_PUBLIC_HOST}
-      - NODE_ENV= developement
+      - NEXT_PUBLIC_HOST=${NEXT_PUBLIC_HOST} 
       - HOSTNAME=${NEXT_PUBLIC_HOST}
       
     networks:
