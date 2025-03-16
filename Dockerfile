@@ -1,8 +1,33 @@
 FROM node:20.15.0-alpine AS base
 
-RUN apk update && apk add --no-cache sudo bash
-RUN sudo apk add npm
-RUN npm install -g npm@latest
+ENV APP_ROOT="/usr/src/app" \
+  NEXT_TELEMETRY_DISABLED=1 \
+  NODE_PORT="3000" \
+  NPM_CONFIG_AUDIT=false \
+  NPM_CONFIG_FUND=false \
+  NPM_CONFIG_UPDATE_NOTIFIER=false
+
+EXPOSE ${NODE_PORT}
+
+RUN set -euo pipefail; \
+  \
+  apk add --no-cache --update \
+  bash \
+  ca-certificates \
+  curl \
+  git \
+  make \
+  shadow \
+  sudo; \
+  \
+  npm install -g deps-ok; \
+  \
+  mkdir -p "${APP_ROOT}"; \
+  chown node:node "${APP_ROOT}"; \
+  \
+  echo "chown node:node ${APP_ROOT}" > /usr/local/bin/init_volumes; \
+  chmod +x /usr/local/bin/init_volumes
+
 
 # Check versions
 RUN node -v
